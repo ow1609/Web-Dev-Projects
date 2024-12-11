@@ -1,0 +1,21 @@
+/* Import Nunito font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #F5F5F5;
+}
+
+h1, h2, h3 {
+    color: #526E48;
+}
+
+
+.menu-bar-logo {
+    width: 5rem;
+}
+
+.page-title-logo {
+    width: 15rem;
+}
+
