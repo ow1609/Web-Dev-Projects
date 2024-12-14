@@ -23,3 +23,13 @@ My Learning Portal
 
 
 TODO - learning materials - downloadables to sell
+
+
+Photo by <a href="https://unsplash.com/@scamartist?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Carl Jorgensen</a> on <a href="https://unsplash.com/photos/girl-in-purple-and-black-long-sleeve-shirt-holding-black-pen-writing-on-white-paper-leyUrzdwurc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+    
+
+Photo by <a href="https://unsplash.com/@sickhews?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Wes Hicks</a> on <a href="https://unsplash.com/photos/man-wearing-headphones-while-sitting-on-chair-in-front-of-macbook-4-EeTnaC1S4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      
+
+      Photo by <a href="https://unsplash.com/@comparefibre?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Compare Fibre</a> on <a href="https://unsplash.com/photos/woman-in-red-and-white-hoodie-wearing-black-headphones-e5sTz361Jzg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      
