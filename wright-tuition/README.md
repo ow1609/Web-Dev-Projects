@@ -17,3 +17,9 @@ My Learning Portal
     log in / user profiles
     for students and/or parents to track progress, send and receive homework/feedback, upload images, comment on homework etc
     send message to tutor
+    downloadable learning resources - cart to buy learning materials
+    interactive games / online learning activities - like ttrs
+
+
+
+TODO - learning materials - downloadables to sell

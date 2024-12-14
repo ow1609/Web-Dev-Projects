@@ -10,26 +10,30 @@
 
 <body>
 
-    <!-- Menu bar TODO, create menu bar component to render on each page-->
-    <a href="./index.html"><img class="menu-bar-logo" src="./assets/WTLogo.png" alt="Wright-Tuition-Logo"/></a>
-    <a href="./public/about.html">About</a>
-    <a href="./public/prices.html">Prices</a>
-    <a href="./public/discounts.html">Discounts</a>
-    <a href="./public/mission.html">Mission</a>
-    <a href="./public/subjects.html">Subjects</a>
-    <a href="./public/testimonials.html">Testimonials</a>
-    <a href="./public/booking-form.html">Free Consultation</a>
-    <a href="./public/contact.html">Contact</a>
-
-    <hr />
+    <nav>
+        <ul>
+            <!-- <li><a href="./index.html"><img class="menu-bar-logo" src="./assets/WTLogo.png" alt="Wright-Tuition-Logo"/></a></li> -->
+            <li><a href="./index.html">Wright Tuition</a></li>
+            <li><a href="./public/about.html">About</a></li>
+            <li><a href="./public/prices.html">Prices</a></li>
+            <li><a href="./public/discounts.html">Discounts</a></li>
+            <li><a href="./public/subjects.html">Subjects</a></li>
+            <li><a href="./public/testimonials.html">Testimonials</a></li>
+            <li><a href="./public/booking-form.html">Free Consultation</a></li>
+            <li><a href="./public/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+        
 
     <h1>Wright Tuition</h1>
 
-    <a href="./public/booking-form.html">BOOK A FREE CONSULTATION</a>
+    <!-- TODO - use JS properly with an actual onclick function to navigate?-->
+    <a href="./booking-form.html"><button onclick="navToBookingForm()" >Book a <strong>FREE</strong> consultation</button></a>
 
     <h2>Boosting confidence and boosting grades!</h2>
 
-    <p>Whether you're a parent seeking additional support for your child or an adult learner looking to improve your skills to advance your career, Wright Tuition is for you. Whatever corner of the globe you live in, Wright Tuition is the right choice for your education.</p>
+    <p>Whether you're a parent seeking additional support for your child or an adult learner 
+        looking to improve your skills to advance your career, Wright Tuition is for you. Whatever corner of the globe you live in, Wright Tuition is the right choice for your education.</p>
 
     <ul>
         <li>All lessons are taught by a highly skilled tutor dedicated to helping you achieve your learning goals.</li>
@@ -42,13 +46,16 @@
     <img src="./assets/images/lady-studying-at-home-with-laptop.jpg" width="33%" alt="A lady sat on a couch studying on with laptop"/>
     <img src="./assets/images/young-adult-male-and-female-studying-on-a-laptop.jpg" width="33%" alt="A young man and woman studying at home on a laptop"/> 
 
-    
-    <p>Image source: <a href="https://www.freepik.com/" target="_blank" rel="noopener noreferrer">Freepik</a></p>
 
+    <!-- TODO - use JS properly with an actual onclick function to navigate?-->
+    <a href="./booking-form.html"><button onclick="navToBookingForm()" >Book a <strong>FREE</strong> consultation</button></a>
 
-    <a href="./public/booking-form.html">BOOK A FREE CONSULTATION</a>
-
-    <footer><small>© Onuora Wright. All Rights Reserved.</small></footer>
+    <footer>
+        <ul>
+            <li><small>Image source: <a href="https://www.freepik.com/" target="_blank" rel="noopener noreferrer">Freepik</a></small></li>
+            <li><small>© Onuora Wright. All Rights Reserved.</small></li>
+        </ul>
+    </footer>
 
 </body>
 </html>
