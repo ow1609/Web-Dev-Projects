@@ -77,3 +77,12 @@ button {
     display: inline-block;
     font-size: 1rem;
   }
+
+#ow-profile-photo {
+    float: left;
+    margin: 0 1rem;
+}
+
+footer {
+    clear: both;
+}
