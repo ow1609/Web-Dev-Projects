@@ -13,8 +13,60 @@
         font-family: "Sono", sans-serif;
       }
 
+      .pricing-container {
+        display: flex;
+        gap: 2rem;
+        justify-content: space-around;
+        height: 100vh;
+        align-items: center;
+        width: 100%;
+      }
+
+      .pricing-plan {
+        background-color: lightgray ;
+        flex: 1;
+        text-align: center;
+      }
+
+      .pricing-plan > * {
+        margin: 1rem 0rem;
+      }
+
+      li {
+        margin: 1rem 0rem;
+        padding: 0;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      .plan-price {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .plan-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .plan-button {
+        background-color: darkorange;
+        border-radius: 10%;
+        color: white;
+        border: none;
+        padding: 0.5rem;
+      }
+
+
+
       /* Hint: What can you do with a media query and flexbox? */
       @media (max-width: 1250px) {
+        .pricing-container {
+          flex-direction: column;
+        }
+        
       }
     </style>
   </head>
