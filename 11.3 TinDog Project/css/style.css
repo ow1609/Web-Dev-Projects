@@ -41,6 +41,6 @@
   margin-left: calc(-.5* var(--bs-gutter-x));
 }
 
-.row > div > img {
+.business-logo {
   height: 30px;
 }
