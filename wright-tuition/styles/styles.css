@@ -86,3 +86,54 @@ button {
 footer {
     clear: both;
 }
+
+.title-container {
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+}
+
+
+.wright-tuition {
+    font-size: 5vw;
+    margin: 0;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.strap-line {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    font-size: 2em;
+    margin: 0;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.title-left-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .title-container {
+        grid-template-columns: 1fr;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 769px) {
+    p {
+      font-size: 20px;
+    }
+  }
+  
