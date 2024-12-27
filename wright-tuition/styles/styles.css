@@ -22,10 +22,10 @@ nav {
 }
 
 h1 {
-    font-size: 4rem
+    font-size: 4rem;
 }
 
-li {
+nav li, footer li {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -68,7 +68,7 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 #ow-profile-photo {
@@ -93,11 +93,11 @@ footer, nav {
 }
 
 .container-left-col {
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-content: space-between; */
+    grid-row: 1 / -1;
 }
-
 
 .container-right-col {
     display: flex;
@@ -110,6 +110,7 @@ footer, nav {
     width: 100%;
     justify-content: space-evenly;
 }
+
 
 
 
@@ -136,13 +137,16 @@ p {
 .subject-matrix {
     grid-column: 2 / -1;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr repeat(3fr);
     justify-content: center;
     align-content: center;
     gap: 3em;
 }
 
+.grid-header {
+    grid-column: 1 / -1;
+}
 /* .subject-matrix > div {
     gap: 5rem;
 } */
