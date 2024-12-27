@@ -23,6 +23,7 @@ nav {
 
 h1 {
     font-size: 4rem;
+    margin-bottom: 1rem;
 }
 
 nav li, footer li {
@@ -40,10 +41,16 @@ a {
 
 
 
-li, p {
-    text-align: left;
+li, li > p {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
+p {
+    font-size: 1.5rem;
+    text-align: justify;
+}
 
 .text-align-left {
     text-align: left;
@@ -72,8 +79,9 @@ button {
 }
 
 #ow-profile-photo {
-    float: left;
-    margin: 0 1rem;
+    padding: 1rem;
+    width: 40%;
+    height:auto;
 }
 
 footer, nav {
@@ -93,16 +101,19 @@ footer, nav {
 }
 
 .container-left-col {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-content: space-between; */
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
     grid-row: 1 / -1;
+    grid-column: 1;
 }
 
 .container-right-col {
     display: flex;
     flex-direction: column;
     align-content: space-between;
+    grid-row: 1 / -1;
+    grid-column: 2;
 }
 
 .flex-row-container { 
@@ -114,11 +125,7 @@ footer, nav {
 
 
 
-p {
-    font-size: 1.5rem;
-    padding: 0;
-    text-align: justify;
-}
+
 
 .strap-line {
     grid-row-start: 2;
