@@ -10,8 +10,9 @@
 
 <body>
 
-    <nav>
-        <ul>
+    <section id="navbar">
+    <nav>      
+        <ul class="flex-row-container">
             <!-- <li><a href="./index.html"><img class="menu-bar-logo" src="./assets/WTLogo.png" alt="Wright-Tuition-Logo"/></a></li> -->
             <li><a href="./index.html">Wright Tuition</a></li>
             <li><a href="./public/subjects.html">Subjects</a></li>
@@ -22,23 +23,23 @@
             <li><a href="./public/contact.html">Contact</a></li>
         </ul>
     </nav>
+    </section>
 
 
     <section id="title">
 
-    <div class="title-container">
-        <div class="title-left-col">
+    <div class="container">
+        <div class="left-flex">
             <h1 class="wright-tuition">Wright Tuition</h1>
             <h2 class="strap-line">Boosting confidence and boosting grades!</h2>
             <p>Whether you're a parent looking for extra support for your child or an adult seeking to improve your skills to advance your career, Wright Tuition is the <strong><em>Wright</em></strong> choice for you.</p> 
+            <div class=""></div>
             <!-- TODO - use JS properly with an actual onclick function to navigate?-->
-            <a href="./booking-form.html"><button onclick="navToBookingForm()" >Book a <strong>FREE</strong> consultation</button></a>
+            <a href="./public/booking-form.html"><button onclick="navToBookingForm()" >Book a <strong>FREE</strong> consultation</button></a>
         </div>
-        <div>
+        <div class="right-flex">
             <img class="responsive" src="./assets/images/father-daughter-home-learning-with-laptop.jpg" alt="father-daughter-home-learning-with-laptop">
-        </div>
-            
-            
+        </div>          
     </div>
 </section>
 
@@ -56,9 +57,8 @@
     <img src="./assets/images/lady-studying-at-home-with-laptop.jpg" width="33%" alt="A lady sat on a couch studying on with laptop"/>
     <img src="./assets/images/young-adult-male-and-female-studying-on-a-laptop.jpg" width="33%" alt="A young man and woman studying at home on a laptop"/> 
 
-
-    <!-- TODO - use JS properly with an actual onclick function to navigate?-->
-    <a href="./booking-form.html"><button onclick="navToBookingForm()" >Book a <strong>FREE</strong> consultation</button></a>
+<!-- TODO - use JS properly with an actual onclick function to navigate?-->
+<a href="./public/booking-form.html"><button onclick="navToBookingForm()" >Book a <strong>FREE</strong> consultation</button></a>
 
     <footer>
         <ul>

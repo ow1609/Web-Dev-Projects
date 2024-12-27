@@ -9,18 +9,20 @@
     
     <body>
 
-        <nav>
-            <ul>
-                <!-- <li><a href="../index.html"><img class="menu-bar-logo" src="../assets/WTLogo.png" alt="Wright-Tuition-Logo"/></a></li> -->
-                <li><a href="../index.html">Wright Tuition</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./prices.html">Prices</a></li>
-                <li><a href="./discounts.html">Discounts</a></li>
-                <li><a href="./subjects.html">Subjects</a></li>
-                <li><a href="./booking-form.html">Free Consultation</a></li>
-                <li><a href="./contact.html">Contact</a></li>            
-            </ul>
-        </nav>
+        <section id="navbar">
+            <nav>      
+                <ul class="flex-row-container">
+                    <!-- <li><a href="./index.html"><img class="menu-bar-logo" src="./assets/WTLogo.png" alt="Wright-Tuition-Logo"/></a></li> -->
+                    <li><a href="../index.html">Wright Tuition</a></li>
+                    <li><a href="./subjects.html">Subjects</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./prices.html">Prices</a></li>
+                    <li><a href="./discounts.html">Discounts</a></li>
+                    <li><a href="./booking-form.html">Booking</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            </section>
 
         <h1>Get in Touch</h1>
 
@@ -36,14 +38,14 @@
 
 
 
-        <p class="text-align-center">Email: <a href="mailto: enquiries@wrighttuition.com">enquiries@wrighttuition.com</a></p>
+        <p class="text-align-center">Email: <a id="email-address" href="mailto: enquiries@wrighttuition.com">enquiries@wrighttuition.com</a></p>
 
         <!-- TODO: second line/number for Wright Tuition calls and texts -->
          
         <!-- TODO - use JS properly with an actual onclick function to navigate?-->
         <a href="./booking-form.html"><button onclick="navToBookingForm()" >Book a <strong>FREE</strong> consultation</button></a>
 
-        <footer>
+        <footer class="flex-row-container">
             <ul>
                 <li><small>Image source: <a href="https://www.freepik.com/" target="_blank" rel="noopener noreferrer">Freepik</a></small></li>
                 <li><small>© Onuora Wright. All Rights Reserved.</small></li>

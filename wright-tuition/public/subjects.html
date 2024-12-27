@@ -9,49 +9,69 @@
 
 <body>
   
-  <nav>
-    <ul>
-        <!-- <li><a href="../index.html"><img class="menu-bar-logo" src="../assets/WTLogo.png" alt="Wright-Tuition-Logo"/></a></li> -->
-        <li><a href="../index.html">Wright Tuition</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./prices.html">Prices</a></li>
-        <li><a href="./discounts.html">Discounts</a></li>
-        <li><a href="./subjects.html">Subjects</a></li>
-        <li><a href="./booking-form.html">Free Consultation</a></li>
-        <li><a href="./contact.html">Contact</a></li>            
-    </ul>
-</nav>
+  <section id="navbar">
+    <nav>      
+        <ul class="flex-row-container">
+            <!-- <li><a href="./index.html"><img class="menu-bar-logo" src="./assets/WTLogo.png" alt="Wright-Tuition-Logo"/></a></li> -->
+            <li><a href="../index.html">Wright Tuition</a></li>
+            <li><a href="./subjects.html">Subjects</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./prices.html">Prices</a></li>
+            <li><a href="./discounts.html">Discounts</a></li>
+            <li><a href="./booking-form.html">Booking</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    </section>
 
-<h1>Subjects</h1>
+  <section>
+    <div class="container">
+        <div class="container-left-col">
+          <h1>Subjects</h1>
+          <h2>Boosting confidence and boosting grades!</h2>
+          <!-- TODO - use JS properly with an actual onclick function to navigate?-->
+          <a href="./booking-form.html"><button onclick="navToBookingForm()" >Book a <strong>FREE</strong> consultation</button></a>
+          <h3>Wright Tuition currently offers the following subjects at a range of levels including complete beginner:</h3>
+        </div>
+        <div class="subject-matrix">
+          <div>
+            <h3>English</h3>
+          </div>
+          <div>
+            <h3>English as a foreign language for non-native speakers</h3>
+          </div>
+          <!-- break English down into phonics and beginning reading, then reading, writing, listening, speaking up to GCSE -->
+          <div>
+            <h3>Programming and Web Development</h3>
+          </div>
+          <div>
+            <h3>Maths</h3>
+            <img class="responsive" src="../assets/images/math-tools.jpg" alt="math-tools"></div>
+          <div>
+            <h3>Spanish</h3>
+            <img class="responsive" src="../assets/images/spanish.png" alt="spanish-hola-speech-bubble">
+          </div>
+          <div>French</div>
+          <div>Personal, Social, Health and Economic (PSHE) Education</div>
+          <div>11+ Entrance Exams</div>
+          <div>GCSE learning</div>
+        </div>
+    </div>
+    
 
-<!-- TODO - use JS properly with an actual onclick function to navigate?-->
-<a href="./booking-form.html"><button onclick="navToBookingForm()" >Book a <strong>FREE</strong> consultation</button></a>
+<!-- TODO subject page to include example resources FREE downloadables and paid for ones -->
 
-<h2>Boosting confidence and boosting grades!</h2>
 
-<!-- <h2>Have fun. Grow in confidence. Achieve your potential.</h2> -->
+  </section>
+      <!-- links to Maths, Spanish and French on GCSE learning page-->
+    <li>A Levels</li>
+      <!-- links to Spanish and French on A Level learning page-->
+      <!-- Computer programming?? -->
+    <li>Writing CVs, Cover Letters and Personal Statements</li>
+  </div>
+</div>
 
-<h3>Wright Tuition currently offers the following subjects at a range of levels including complete beginner:</h3>
 
-<!-- TODO insert images with anchor tags for each list item linking to individual subject pages -->
-  <!-- Each subject page to include example resources -->
-<ul>
-  <li>English</li>
-  <li>English as a foreign language for non-native speakers</li>
-  <!-- break English down into phonics and beginning reading, then reading, writing, listening, speaking up to GCSE -->
-  <li>Programming and Web Development</li>
-  <li>Maths</li>
-  <li>Spanish</li>
-  <li>French</li>
-  <li>Personal, Social, Health and Economic (PSHE) Education</li>
-  <li>11+ Entrance Exams</li>
-  <li>GCSE learning</li>
-    <!-- links to Maths, Spanish and French on GCSE learning page-->
-  <li>A Levels</li>
-    <!-- links to Spanish and French on A Level learning page-->
-    <!-- Computer programming?? -->
-  <li>Writing CVs, Cover Letters and Personal Statements</li>
-</ul>
 
 
 <!-- TODO - use JS properly with an actual onclick function to navigate?-->
