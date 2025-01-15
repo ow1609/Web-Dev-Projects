@@ -7,12 +7,14 @@ for (let i = 0; i < numberOfDrumButtons; i++) {
 
         let buttonInnerHTML = this.innerHTML;
         makeSound(buttonInnerHTML);
+        buttonAnimation(buttonInnerHTML);
     });
 }
 
 // detecting keyboard presses
 document.addEventListener("keydown", function(event) {
     makeSound(event.key);
+    buttonAnimation(event.key);
 })
 
 
@@ -59,4 +61,16 @@ function makeSound(key) {
     }
 }
 
+function buttonAnimation(currentKey) {
+    var activeButton = document.querySelector("." + currentKey);
+
+    // apply "pressed" class from css file to create shadow effect on click or on keyboard press
+    activeButton.classList.add("pressed");
+
+    // time out function to restore button back to normal
+    setTimeout(function() {
+        activeButton.classList.remove("pressed");
+
+    }, 100) // 100 milliseconds = a 0.1 second wait before shadow is removed
+}
 
