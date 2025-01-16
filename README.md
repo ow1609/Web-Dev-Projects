@@ -5,7 +5,9 @@ This Repo shows my learning journey following the [**_The Complete 2024 Web Deve
 <ins>Course Tech Stack:</ins>
 * HTML
 * CSS
+* Bootstrap
 * JavaScript
+* JQuery
 * Node
 * React
 * PostgreSQL
