@@ -41,10 +41,11 @@ $("input").keypress(function(event) {
 
 // options for detecting keypresses anywhere on page with jquery selectors: $("body") or $(document)
 
-$("body").keypress(function(event) {
-    alert("You pressed the " + event.key + " key");
-})
+// $("body").keypress(function(event) {
+//     alert("You pressed the " + event.key + " key");
+// })
 
 $(document).keypress(function(event) {
     console.log("The use pressed the " + event.key + " key");
+    $("h1").text(event.key);
 })
