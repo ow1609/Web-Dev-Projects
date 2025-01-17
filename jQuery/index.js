@@ -47,5 +47,20 @@ $("input").keypress(function(event) {
 
 $(document).keypress(function(event) {
     console.log("The use pressed the " + event.key + " key");
-    $("h1").text(event.key);
 })
+
+// using .on() method to add event listeners
+$("a").on("mouseover", function() {
+    $("a").css("color", "pink");
+})
+
+$("button").on("mouseout", function() {
+    $("button").text("visited");
+})
+
+// using jquery to add new html elements
+// the .before() method stipulates to position the new button element before the h1
+$("h1").before("<button>New Button Element</button>");
+
+// the .after() method stipulates to create the new element after the selected element
+$("a").after("<p>Enter your text inside this box:</p>");
