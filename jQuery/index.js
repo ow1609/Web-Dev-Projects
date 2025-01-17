@@ -19,8 +19,16 @@ $("a").attr("href", "https://www.google.com").text("Search");
 
 // vanilla js to add event listeners to all 5 button elements 
 // so when any of the buttons is clicked, it calls the callback function which changes the h1's colour
-for (var i = 0; i < 5; i++) {
-    document.querySelectorAll("button")[i].addEventListener("click", function() {
-        document.querySelector("h1").style.color = "blue";
-    })
-}
+
+// for (var i = 0; i < 5; i++) {
+//     document.querySelectorAll("button")[i].addEventListener("click", function() {
+//         document.querySelector("h1").style.color = "blue";
+//     })
+// }
+
+// below is jquery equivalent of the above js for loop method 
+// no need for for loop as it jquery adds it to all buttons
+// also less verbose in general with $ etc
+$("button").click(function() {
+    $("h1").css("color", "pink");
+})
