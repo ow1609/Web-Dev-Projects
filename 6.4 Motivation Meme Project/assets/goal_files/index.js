@@ -44,7 +44,3 @@ $("input").keypress(function(event) {
 $("body").keypress(function(event) {
     alert("You pressed the " + event.key + " key");
 })
-
-$(document).keypress(function(event) {
-    console.log("The use pressed the " + event.key + " key");
-})
