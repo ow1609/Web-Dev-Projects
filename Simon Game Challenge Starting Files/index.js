@@ -1,1 +1,1 @@
-alert("test link to external JS file");
+// alert("test link to external JS file");
