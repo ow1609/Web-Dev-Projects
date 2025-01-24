@@ -1,0 +1,1 @@
+alert("test link to external JS file");
