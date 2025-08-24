@@ -12,33 +12,52 @@ let randomChosenColour = buttonColours[nextSequence()];
 
 gamePattern.push(randomChosenColour);
 
-function buttonAnimation(randomChosenColour) {
-    switch (randomChosenColour) {
-        case "red":
-            $("#red").animate({opacity: 0.5});
-            let redButtonSound = new Audio("./sounds/red.mp3");
-            redButtonSound.play();
-            break;
 
-        case "blue":
-            $("#blue").animate({opacity: 0.5});
-            let blueButtonSound = new Audio("./sounds/blue.mp3");
-            blueButtonSound.play();
-            break;
-        
-        case "green":
-            $("#green").animate({opacity:0.5});
-            let greenButtonSound = new Audio("./sounds/green.mp3");
-            greenButtonSound.play();
-            break;
-        
-        case "yellow":
-            $("#yellow").animate({opacity: 0.5});
-            let yellowButtonSound = new Audio("./sounds/yellow.mp3");
-            yellowButtonSound.play();
-            break;
-        
-        default: console.log(randomChosenColour);
+let gameStarted = false; // Flag to track if the game has started
 
+// Event listener for the Start Game button
+$("#start-game-btn").on("click", function () {
+    if (!gameStarted) {
+        gameStarted = true;
+        $("#start-game-btn").hide();
+        playGamePattern();
     }
+})
+
+function playGamePattern() {
+    let delay = 0;
+
+    gamePattern.forEach((color, index) => {
+        setTimeout(() => {
+            buttonAnimation(color);
+        }, delay);
+
+        delay += 800; // Increment delay for the next color
+    })
 }
+
+function buttonAnimation(randomChosenColour) {
+    $("#" + randomChosenColour)
+        .animate({ opacity: 0.5 }, 200) // Reduce opacity to 0.5 over 100ms (fade out effect for clearer visible change for user)
+        .animate( {opacity: 1 }, 200); // Restore opacity to 1 over 100ms
+    
+    // Play the corresponding sound
+    let buttonSound = new Audio("./sounds/" + randomChosenColour + ".mp3");
+    console.log("buttonSound: " + buttonSound);
+    buttonSound.play();   
+    }
+
+
+
+// Event listener for button clicks
+$(".btn").on("click", function(event) {
+    /*
+    Get the id of the button (<div> element)that triggered the event
+    and store it in a variable called userChosenColor
+    event.target is the DOM element that triggered the event
+    */
+    let buttonClickedByUser = event.target.id;
+    console.log("User clicked: " + buttonClickedByUser);
+});
+
+
