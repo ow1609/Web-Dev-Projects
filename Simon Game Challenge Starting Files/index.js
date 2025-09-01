@@ -1,3 +1,11 @@
+
+/*
+
+STARTED AGAIN WITH GAME.JS BECAUSE IT HAD BEEN TOO LONG AND I NEEDED A JQUERY REFRESHER
+AS OPPOSED TO RELYING ON COPILOT TO SUPPORT ME TOO MUCH
+*/
+
+
 let gamePattern = [];
 let userClickedPattern = [];
 let buttonColours = ["red", "blue", "green", "yellow"];
