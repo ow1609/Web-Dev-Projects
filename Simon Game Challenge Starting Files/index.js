@@ -1,16 +1,18 @@
 let gamePattern = [];
-
+let userClickedPattern = [];
 let buttonColours = ["red", "blue", "green", "yellow"];
 
 
-function nextSequence() {
+function addNextInSequence() {
+    console.log(`addNextInSequence invoked. Current game pattern is ${gamePattern}. Adding a new colour...`);
+    userClickedPattern = []; // Reset user's pattern for the new sequence
     let randomNumber = (Math.floor(Math.random() * 4));
-    return randomNumber;
+    let randomChosenColour = buttonColours[randomNumber];
+    gamePattern.push(randomChosenColour);
+    console.log(randomChosenColour + " added to Sequence");
+    console.log("gamePattern is now: " + gamePattern);
 }
 
-let randomChosenColour = buttonColours[nextSequence()];
-
-gamePattern.push(randomChosenColour);
 
 
 let gameStarted = false; // Flag to track if the game has started
@@ -59,5 +61,13 @@ $(".btn").on("click", function(event) {
     let buttonClickedByUser = event.target.id;
     console.log("User clicked: " + buttonClickedByUser);
 });
+
+function animatePress(currentColour) {
+    // TODO: Add implementation later
+
+}
+
+
+
 
 
