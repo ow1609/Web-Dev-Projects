@@ -1,6 +1,7 @@
 let gamePattern = [];
 const buttonColours = ["red", "blue", "green", "yellow"];
 let randomChosenColour = buttonColours[nextInSequence()];
+let userClickedPattern = [];
 
 
 function updateGamePattern() {
@@ -20,6 +21,14 @@ We only want the function to be called upon the click event happening
 With parentheses, startGame() would be called with or without the click event
 */
 $("#start-game-btn").click(startGame); 
+
+$(".btn").on("click", function(event) {
+    // event.target is the DOM element that triggered the event
+    let userButtonClicked = event.target.id;
+    animateButton(userButtonClicked);
+    playButtonSound(userButtonClicked);
+    userClickedPattern.push(userButtonClicked);
+});
     
     
 function startGame(){
@@ -39,3 +48,4 @@ function playButtonSound(randomChosenColour) {
     let buttonSound = new Audio("./sounds/" + randomChosenColour + ".mp3");
     buttonSound.play();
 }
+
