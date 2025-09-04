@@ -28,8 +28,14 @@ function startGame(){
     updateGamePattern() 
     // NB animateButton instead of animateButton() for same reason as before
     gamePattern.forEach(animateButton);
+    gamePattern.forEach(playButtonSound);
     }
 
 function animateButton(randomChosenColour) {
     $("#" + randomChosenColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+}
+
+function playButtonSound(randomChosenColour) {
+    let buttonSound = new Audio("./sounds/" + randomChosenColour + ".mp3");
+    buttonSound.play();
 }
