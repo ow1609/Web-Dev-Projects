@@ -1,19 +1,16 @@
 let gamePattern = [];
 const buttonColours = ["red", "blue", "green", "yellow"];
-let randomChosenColour = buttonColours[nextInSequence()];
 let userClickedPattern = [];
 
 
-function updateGamePattern() {
+function addNextInSequence() {
+    let randomNumber = (Math.floor(Math.random() * 4));
+    let randomChosenColour = buttonColours[randomNumber];
     gamePattern.push(randomChosenColour);
 }
 
-function nextInSequence() {
-    let randomNumber = (Math.floor(Math.random() * 4));
-    return randomNumber;
-}
-
 /*
+Key Learning Point:
 NB startGame instead of startGame() (ie. without parentheses) 
 so the startGame function only gets called as a callback function
 upon the click event, as per event listener syntax
@@ -24,28 +21,27 @@ $("#start-game-btn").click(startGame);
 
 $(".btn").on("click", function(event) {
     // event.target is the DOM element that triggered the event
-    let userButtonClicked = event.target.id;
-    animateButton(userButtonClicked);
-    playButtonSound(userButtonClicked);
-    userClickedPattern.push(userButtonClicked);
+    let userChosenColour = event.target.id;
+    animateButton(userChosenColour);
+    playButtonSound(userChosenColour);
+    userClickedPattern.push(userChosenColour);
 });
     
     
 function startGame(){
-    console.log("Start button pressed");
     $("#start-game-btn").hide();
-    updateGamePattern() 
+    addNextInSequence()
     // NB animateButton instead of animateButton() for same reason as before
     gamePattern.forEach(animateButton);
     gamePattern.forEach(playButtonSound);
     }
 
-function animateButton(randomChosenColour) {
-    $("#" + randomChosenColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+function animateButton(colour) {
+    $("#" + colour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
 }
 
-function playButtonSound(randomChosenColour) {
-    let buttonSound = new Audio("./sounds/" + randomChosenColour + ".mp3");
+function playButtonSound(colour) {
+    let buttonSound = new Audio("./sounds/" + colour + ".mp3");
     buttonSound.play();
 }
 
