@@ -1,3 +1,9 @@
+/*
+TODO step 7 in Game development module - look into persistence
+Add a "game level" element
+
+*/
+
 let gamePattern = [];
 const buttonColours = ["red", "blue", "green", "yellow"];
 let userClickedPattern = [];
@@ -25,10 +31,12 @@ $(".btn").on("click", function(event) {
     animateButton(userChosenColour);
     playButtonSound(userChosenColour);
     userClickedPattern.push(userChosenColour);
+    // TODO Call game pattern checker function here
 });
     
     
 function startGame(){
+    // TODO - add check here to know if start game button is hidden or showing
     $("#start-game-btn").hide();
     addNextInSequence()
     // NB animateButton instead of animateButton() for same reason as before
@@ -44,4 +52,25 @@ function playButtonSound(colour) {
     let buttonSound = new Audio("./sounds/" + colour + ".mp3");
     buttonSound.play();
 }
+
+/*
+TODO
+Define a function that checks userClickedPattern against gamePattern
+Negative error sound to feedback to user for incorrect press
+If  user makes a mistake {
+    clear userClickedPattern
+    clear gamePattern
+    set game level to 0
+    reinstate the start game button
+}
+Positive sound to feedback to user if they reached the end of the gamePattern
+    If user completes pattern {
+    clear userClickedPattern array
+    increment the game level number
+    call addNextInSequence() function
+    $("#start-game-btn").show();
+
+}
+
+ */
 
