@@ -4,7 +4,7 @@ const port = 3000;
 
 // *********************
 // Let’s practice using Postman. Make sure your server is running with nodemon.
-// Then test the 5 different routes below with Postman. Open a separate tab for each request.
+// Then test the 5 different routes below with Postman. Open a separate tab for each http request.
 // Check that for each route you’re getting the correct status code returned to you from your server.
 // You should not get any 404s or 500 status codes.
 // *********************
@@ -43,6 +43,12 @@ app.get("/", (req, res) => {
 *******************************
 */
 
+/*
+
+The rest of following http requests are also going to be sent to localhost:3000 but with different endpoints
+*/
+
+
 // Thanks to copilot's explanation, I was able to send multiple things (i.e. the status and the html)
 app.get("/paragraph", (req, res) => {
   res.status(200).send("<h1>Paragraph Page</h1><p>Hey, I'm your server, I'm sending a paragraph as part of the response to your GET request</p>");
@@ -50,15 +56,29 @@ app.get("/paragraph", (req, res) => {
 
 
 app.post("/register", (req, res) => {
-  //Do something with the data
+
+  /*
+  For this POST request, add key value pairs into the request body as if you're signing up a new user
+  e.g. key=name value = Onuora, key = email value = onuora@email.com, and key = postcode value = ENG L4ND
+  In reality this data would be sent to the server and dealt with by the server e.g. added to a database
+
+*/
   res.sendStatus(201);
 });
 
 app.put("/user/put/onuora", (req, res) => {
+  /*
+For this PUT request, add a key value pair into the request body as if you're changing ALL THE DATA for a user
+i.e. name, email and postcode
+
+PUT requests are for updating a user but you would normally be completely replacing the entire user object 
+and would input all the data
+  */
   res.sendStatus(200);
 });
 
 app.patch("/user/patch/onuora", (req, res) => {
+  // In the case of the PATCH request, can simply change one detail about the user
   res.sendStatus(200);
 });
 
