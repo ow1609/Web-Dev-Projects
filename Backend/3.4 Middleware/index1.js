@@ -14,10 +14,27 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
-const port = 3000;
 
-// The following lines of code should mean that we see the html form from index.html
-// rendered on screen when we make a GET request to the homepage
+// Add middleware to parse incoming form data
+app.use(express.urlencoded({extended: true}));
+const port = 3000;
+/*
+Explanation of the above:
+app.use() tells Express to use middleware for all incoming requests
+express.urlencoded() is the built-in middleware that parses URL-encoded form data
+(the type of data HTML forms send by default)
+{ extend: true } allows for rich objects and arrays to be encoded
+into the URL-encoded format (it uses a library called qs under the hood for more complex parsing)
+
+Without this middleware, req.body would be undefined and we would not be able to access the form data
+*/
+
+// A route handler for GET requests to the homepage
+/*
+The following lines of code should mean that we see the html form from index.html
+rendered on screen when we make a GET request to the homepage
+*/
+
 app.get("/", (req, res) => {
   /* 
   We can log the directory name plus the path to the file we want
@@ -36,6 +53,24 @@ app.get("/", (req, res) => {
   */
   res.sendFile(__dirname + "/public/index.html");
 });
+
+
+// Create a POST route handler
+app.post("/submit", (req, res) => {
+  console.log(req.body);
+})
+/*
+Explanation:
+
+The above creates a route handler to catch POST requests
+which are sent to the /submit route from the HTML form in index.html
+
+app.post() creates a route handler specifically for POST requests
+/submit is the path that matches the `action` attribute in the HTML form
+(req, res ) => {} is the callback function that runs when someone makes a POST request to /submit
+req.body is where the parsed form data will be available (thanks to the middleware added above)
+console.log(req.body) will print the form data to the terminal/console so we can see what was submitted
+*/
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
