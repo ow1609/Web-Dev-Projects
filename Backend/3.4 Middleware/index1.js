@@ -23,9 +23,13 @@ Explanation of the above:
 app.use() tells Express to use middleware for all incoming requests
 express.urlencoded() is the built-in middleware that parses URL-encoded form data
 (the type of data HTML forms send by default)
+.urlencoded tells the middleware what type of data to parse
 { extend: true } allows for rich objects and arrays to be encoded
 into the URL-encoded format (it uses a library called qs under the hood for more complex parsing)
 
+This middleware now means that every request object now has a body
+Whereas before, without this middleware if you tried to tap into req.body, there would be nothing there.
+It simply wouldn't exist and you'd get undefined
 Without this middleware, req.body would be undefined and we would not be able to access the form data
 */
 

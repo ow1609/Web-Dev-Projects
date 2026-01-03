@@ -1,4 +1,4 @@
-# Middleware
+# Introduction to Middleware
 
 Middleware is like a middleman, checkpoint **before** the server processes and responds to http requests.
 
